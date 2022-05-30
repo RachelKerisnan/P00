@@ -23,6 +23,9 @@ public class CalculatorTest {
 	@After
 	public void tearDown() throws Exception {
 	}
+	
+	
+	
 // test normal
 	@Test
 	public void testAddNormal() {
@@ -47,20 +50,20 @@ public class CalculatorTest {
 		Calculator cal = new Calculator();
 		int actual = cal.add(a, b);
 		
-		int expected = 109999999;
+		int expected = 0;
 		assertEquals (expected, actual);
 	}
 	// test error
 		@Test
 		public void testAddError() {
 			//fail("Not yet implemented");
-			String a= "abc";
+			int a= 99999;
 			int b = 0;
 			
 			Calculator cal = new Calculator();
 			int actual = cal.add(a, b);
 			
-			String expected = "The method add(int,int) in the type Calculator is not applicable for the arguments (String,int) ";
+			int expected= 0 ;
 			assertEquals (expected, actual);
 		}
 	
@@ -77,7 +80,7 @@ public class CalculatorTest {
 		Calculator cal = new Calculator();
 		int actual = cal.subtract(a, b);
 		
-		int expected = -7531;
+		int expected = 0;
 		assertEquals (expected, actual);
 	}
 	
@@ -98,13 +101,13 @@ public class CalculatorTest {
 		@Test
 		public void testSubtractError() {
 			//fail("Not yet implemented");
-			int a= -a;
+			int a= -999999;
 			int b = 1;
 			
 			Calculator cal = new Calculator();
 			int actual = cal.subtract(a, b);
 			
-			String expected = "The method add(int,int) in the type Calculator is not applicable for the arguments (String,int) ";
+			int expected = 0;
 			assertEquals (expected, actual);
 		}
 		
@@ -121,7 +124,7 @@ public class CalculatorTest {
 		Calculator cal = new Calculator();
 		int actual = cal.multiply(a, b);
 		
-		int expected = 10816010;
+		int expected = 0;
 		assertEquals (expected, actual);
 	}
 	
@@ -135,7 +138,7 @@ public class CalculatorTest {
 			Calculator cal = new Calculator();
 			int actual = cal.multiply(a, b);
 			
-			int expected = 0;
+			int expected = 8765;
 			assertEquals (expected, actual);
 		}
 		
@@ -143,14 +146,13 @@ public class CalculatorTest {
 		@Test
 		public void testMultiplyError() {
 			//fail("Not yet implemented");
-			int a= b;
-			int b = a;
+			int a= 999999;
+			int b = 0;
 			
 			Calculator cal = new Calculator();
 			int actual = cal.multiply(a, b);
 			
-		String expected = "The method add(int,int) in the type Calculator is not applicable for the arguments (String,int) ";
-			// int expected  = 0;
+			 int expected  = 0;
 			assertEquals (expected, actual);
 		}
 		
@@ -188,13 +190,12 @@ public class CalculatorTest {
 		@Test
 		public void testDivideError() {
 			int a = 0;
-			int b = e;
+			int b = -99999;
 				
 			Calculator cal = new Calculator();
 			int actual = cal.divide(a, b); 
 				 
-			String expected = "The method add(int,int) in the type Calculator is not applicable for the arguments (String,int) ";
-
+			int expected = 0;
 			assertEquals (expected, actual);
 			}
 
