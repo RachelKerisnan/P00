@@ -26,6 +26,7 @@ public class CalculatorTest {
 	
 	
 	
+	
 // test normal
 	@Test
 	public void testAddNormal() {
@@ -40,20 +41,20 @@ public class CalculatorTest {
 		assertEquals (expected, actual);
 	}
 	
-	// test boundary
+// test boundary
 	@Test
 	public void testAddBoundary() {
 		//fail("Not yet implemented");
-		int a= 99999999;
-		int b = 10000000;
+		int a= 9999;
+		int b = 0;
 		
 		Calculator cal = new Calculator();
 		int actual = cal.add(a, b);
 		
-		int expected = 0;
+		int expected = 9999;
 		assertEquals (expected, actual);
 	}
-	// test error
+// test error
 		@Test
 		public void testAddError() {
 			//fail("Not yet implemented");
@@ -70,7 +71,7 @@ public class CalculatorTest {
 	
 	
 	
-	// test normal
+// test normal
 	@Test
 	public void testSubtractNormal() {
 		//fail("Not yet implemented");
@@ -88,16 +89,16 @@ public class CalculatorTest {
 		@Test
 		public void testSubtractBoundary() {
 			//fail("Not yet implemented");
-			int a= -1234;
-			int b = -8765;
+			int a= 9999;
+			int b = 0;
 			
 			Calculator cal = new Calculator();
 			int actual = cal.subtract(a, b);
 			
-			int expected = 0;
+			int expected = 9999;
 			assertEquals (expected, actual);
 		}
-		// test error
+// test error
 		@Test
 		public void testSubtractError() {
 			//fail("Not yet implemented");
@@ -114,7 +115,7 @@ public class CalculatorTest {
 	
 
 	
-	// test normal
+// test normal
 	@Test
 	public void testMultiplyNormal() {
 		//fail("Not yet implemented");
@@ -128,21 +129,21 @@ public class CalculatorTest {
 		assertEquals (expected, actual);
 	}
 	
-	// test boundary
+// test boundary
 		@Test
 		public void testMultiplyBoundary() {
 			//fail("Not yet implemented");
 			int a= 0;
-			int b = -8765;
+			int b = 9999;
 			
 			Calculator cal = new Calculator();
 			int actual = cal.multiply(a, b);
 			
-			int expected = 0;
+			int expected = -9999;
 			assertEquals (expected, actual);
 		}
 		
-		// test Error
+// test Error
 		@Test
 		public void testMultiplyError() {
 			//fail("Not yet implemented");
@@ -155,12 +156,10 @@ public class CalculatorTest {
 			 int expected  = 0;
 			assertEquals (expected, actual);
 		}
-		
 	
 	
 	
-	
-	// test normal
+// test normal
 	@Test
 	public void testDivideNormal() {
 		int a = 4321;
@@ -173,20 +172,20 @@ public class CalculatorTest {
 		assertEquals (expected, actual);
 		}
 
-	// test boundary
+// test boundary
 		@Test
 		public void testDivideBoundary() {
-			int a = 9999;
-			int b = 33;
+			int a =0;
+			int b =9999 ;
 				
 			Calculator cal = new Calculator();
 			int actual = cal.divide(a, b); 
 				 
-			int expected = 303;
+			int expected = 0;
 			assertEquals (expected, actual);
 			}
 
-		// test error
+// test error
 		@Test
 		public void testDivideError() {
 			int a = 0;
