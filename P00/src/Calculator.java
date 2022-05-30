@@ -2,7 +2,7 @@
 public class Calculator {
 	public int add(int a, int b) {
 		int sum = a + b;
-		if ( sum > 9999 || sum < 0) {
+		if ((a > 9999) || (a < 0) && (b > 9999) || (b < 0) ) {
 			sum = 0 ; 
 		}
 		return sum;
@@ -11,7 +11,7 @@ public class Calculator {
 	
 	public int subtract(int a, int b) {
 		int sum = a - b;
-		if ( sum > 9999 || sum < 0) {
+		if ((a > 9999) || (a < 0) && (b > 9999) || (b < 0) )  {
 			sum = 0 ; 
 		}
 		return sum ;
@@ -21,7 +21,7 @@ public class Calculator {
 	public int multiply(int a, int b) {
 		// TODO Auto-generated method stub
 		int sum = a - b;
-		if ( sum > 9999 || sum < 0) {
+		if ((a > 9999) || (a < 0) && (b > 9999) || (b < 0) ) {
 			sum = 0 ; 
 		}
 		return sum ;
@@ -30,10 +30,15 @@ public class Calculator {
 	
 	
 	public int divide(int a, int b) {
+		int sum = a/b;
 		if (b==0) {
 			throw new IllegalArgumentException();
 		}
-		return a / b;
+		if ((a > 9999) || (a < 0) && (b > 9999) || (b < 0) ) {
+			sum = 0; 
+		}
+		
+		return sum;
 	
 	}
 
