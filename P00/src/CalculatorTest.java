@@ -188,7 +188,7 @@ public class CalculatorTest {
 		@Test
 		public void testDivideError() {
 			int a = 0;
-			int b = r;
+			int b = e;
 				
 			Calculator cal = new Calculator();
 			int actual = cal.divide(a, b); 
